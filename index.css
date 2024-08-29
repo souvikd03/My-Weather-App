@@ -5,20 +5,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html {
+html, body {
   width: 100%;
   min-height: 100%;
   background: linear-gradient(136deg, #2e335a 0%, #1c1b33 100%);
   background-image: url('./weather.jpg');
-
-}
-body {
-  width: 100%;
-  min-height: 100%;
-  background-image: url('./weather.jpg');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
-
+/* Upper Section Styles */
 #upper {
   width: 100%;
   display: flex;
@@ -34,6 +31,7 @@ body {
   transition: all 0.5s ease;
 }
 
+/* Heading Styles */
 .heading {
   display: flex;
   align-items: center;
@@ -58,6 +56,7 @@ body {
   font-size: 20px;
 }
 
+/* Search Box Styles */
 #search {
   width: 100%;
   display: flex;
@@ -94,6 +93,7 @@ input::placeholder {
   color: rgb(121, 118, 145);
 }
 
+/* Button Styles */
 button {
   background: rgba(74, 57, 127, 0.7);
   border: none;
@@ -112,6 +112,7 @@ button:hover {
   border: 2px solid #b2d3f2;
 }
 
+/* Cards Section Styles */
 #cards {
   display: flex;
   flex-wrap: wrap;
@@ -180,52 +181,54 @@ button:hover {
   text-align: center;
 }
 
+/* Bubble Animation */
 .bubble-animation {
   animation: bubble 0.5s ease forwards;
 }
 
 @keyframes bubble {
   0% {
-      transform: scale(0);
-      opacity: 0;
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
+/* Responsive Styles */
 @media (max-width: 480px) {
   .heading img {
-      width: 30px;
+    width: 30px;
   }
 
   .heading h1 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .heading h2 {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   #search-box {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   #input {
-      width: 90%;
+    width: 90%;
   }
 
   button {
-      width: 90%;
+    width: 90%;
   }
 
   #card {
-      width: 90%;
+    width: 90%;
   }
 
   #temp h1 {
-      font-size: 30px;
+    font-size: 30px;
   }
 }
